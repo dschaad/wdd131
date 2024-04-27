@@ -1,0 +1,47 @@
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto;
+    border: 1px solid lightgray;
+    padding: 50px 150px;
+}
+
+header {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #006EB6;
+    font-size: 15px;
+    letter-spacing: 4px;
+    margin-bottom: 0px;
+}
+
+hr {
+    margin-top: 0px;
+    border-top: 1px solid rgb(227, 227, 227);
+}
+
+main {
+    margin-bottom: 40px;
+}
+
+p, li {
+    text-align: left;
+}
+
+li {
+    padding: 0px 0px 20px;
+}
+
+img {
+    width: 150px;
+}
