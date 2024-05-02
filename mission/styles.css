@@ -5,6 +5,11 @@ body {
     line-height: 1.5;
 }
 
+.dark {
+    background-color: #333;
+    color: white;
+}
+
 .content {
     max-width: 600px;
     margin: 50px auto;
@@ -23,6 +28,10 @@ h2 {
     font-size: 15px;
     letter-spacing: 4px;
     margin-bottom: 0px;
+}
+
+.dark h2 {
+    color: #4F9ACF;
 }
 
 hr {
