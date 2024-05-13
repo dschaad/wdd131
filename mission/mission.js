@@ -1,8 +1,8 @@
-const themeSelector = document.querySelector('select');  // select dropdown element out of the HTML
+const themeSelector = document.querySelector("select");  // select dropdown element out of the HTML
 function changeTheme() {
     // check to see what the current value of our select is. The current value is conveniently found in themeSelector.value!
     const theme = themeSelector.value;
-    let logo = document.querySelector('img');
+    let logo = document.querySelector("img");
     // if the value is dark then:
     if (theme == 'dark') {
         document.body.classList.add("dark");  // add the dark class to the body
