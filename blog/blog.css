@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --light-purple: #BEA7E5;
+    --magenta: #A14A76;
+    --lapis: #335C81;
+    --body-font: "Libre Baskerville", serif;
+    --header-font: "Sedan SC", serif;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    background-color: var(--light-purple);
+    margin: 0;
+}
+
+.skiptocontent a {
+    position: absolute;
+    top: -40px;
+    background-color: var(--lapis);
+    color: white;
+}
+
+.skiptocontent a:focus {
+    top: 0;
+}
+
+nav {
+    /* background-color: var(--magenta); */
+    border-top: var(--lapis) solid 3px;
+    border-bottom: var(--lapis) solid 3px;
+    padding: 1em 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 110px 110px 100px;
+    list-style-type: none;
+    justify-content: end;
+    justify-items: end;
+    max-width: 75%;
+    margin: 0 auto;
+    font-size: 1.3em;
+}
+
+nav li:first-of-type {
+    grid-column: 1/2;
+}
+
+nav li:nth-of-type(2) {
+    grid-column: 2/3;
+}
+
+nav li:last-of-type {
+    grid-column: 3/4;
+}
+
+a {
+    color: #43023f;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+}
+
+#post-date {
+    grid-column: 1/2;
+}
+
+#post-content {
+    grid-column: 2/3;
+}
+
+#filter-form {
+    grid-column: 3/4;
+}
+
+h1, h2 {
+    font-family: var(--header-font);
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
