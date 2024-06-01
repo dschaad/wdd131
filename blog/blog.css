@@ -64,20 +64,53 @@ a {
 
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     justify-items: center;
+    max-width: 75%;
+    margin: 0 auto;
 }
 
-#post-date {
+article {
+    display: grid;
     grid-column: 1/2;
+    grid-template-columns: 1fr 2fr;
+}
+
+#post-stamp {
+    grid-column: 1/2;
+    text-align: right;
+    line-height: 75%;
+    padding: 0 10px;
+    display: grid;
+}
+
+.stamp {
+    margin-top: 10%;
+    padding: 5%;
+    border-right: var(--magenta) solid 3px;
+    max-height: 100%;
+}
+
+.stamp p:first-child {
+    font-size: 1.3em;
 }
 
 #post-content {
     grid-column: 2/3;
+    margin-top: 5%;
+}
+
+.post {
+    margin-bottom: 5%;
+}
+
+.post img {
+    display: block;
+    margin: 0 auto;
 }
 
 #filter-form {
-    grid-column: 3/4;
+    grid-column: 2/3;
 }
 
 h1, h2 {

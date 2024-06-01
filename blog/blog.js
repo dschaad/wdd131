@@ -23,5 +23,61 @@ const articles = [
 		ages: '12-16',
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
+	},
+	{
+		id: 3,
+		title: "Belgariad Book One: Pawn of Prophecy",
+		date: "Feb 12, 2022",
+		description:
+		"A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his \"Aunt Pol\" and an elderly man calling himself Wolf --a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+		imgSrc:
+		"https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
+		imgAlt: "Book cover for Pawn of Prophecy",
+		ages: "12-16",
+		genre: "Fantasy",
+		stars: "⭐⭐⭐⭐⭐"
 	}
 ]
+
+const all_articles = document.querySelector("#articles");
+
+function addArticle(item) {
+	const article_element = document.createElement('article'); // create a new article element
+
+	// create the #post-stamp and #post-content divs for the article
+	const post_stamp = document.createElement('div');
+	post_stamp.id = "post-stamp";
+	const post_content = document.createElement('div');
+	post_content.id = "post-content";
+	
+	// create the .stamp and .post sections for the article
+	const stamp = document.createElement('section');
+	stamp.classList.add("stamp");
+	const post = document.createElement('section');
+	post.classList.add("post");
+
+	// populate the .stamp and .post HTML with the item details
+	stamp.innerHTML = 
+	`<p>${item.date}</p>
+	<p>${item.ages}</p>
+	<p>${item.genre}</p>
+	<p>${item.stars}</p>`;
+
+	post.innerHTML = 
+	`<h2>${item.title}</h2>
+	<img src=${item.imgSrc} alt=${item.imgAlt}>
+	<p>${item.description}</p>`;
+
+	// add the .stamp and .post sections to the #post-stamp and #post-content divs
+	post_stamp.appendChild(stamp);
+	post_content.appendChild(post);
+
+	// add the #post-stamp and #post-content divs to the article element
+	article_element.appendChild(post_stamp);
+	article_element.appendChild(post_content);
+
+	// add the article element to our #articles div of the document
+	all_articles.append(article_element);
+}
+
+articles.forEach(addArticle);
