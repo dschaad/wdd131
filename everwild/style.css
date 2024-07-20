@@ -98,14 +98,10 @@ p {
 input {
     width: 85px;
     font-size: 1em;
-    /* border: solid var(--accent2-color) 2px; */
-    /* color: var(--accent1-color); */
 }
 
 button {
     font-size: 1em;
-    /* border: solid var(--accent2-color) 2px; */
-    /* color: var(--accent1-color); */
 }
 
 .player-stats li:first-of-type {
